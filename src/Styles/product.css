@@ -1,3 +1,11 @@
+.product{
+    margin-top: 18px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #EEEEEE;
+    background-color: #393E46;
+    padding: 8px;
+}
+
 .product-page-img {
     width: 100%;
     border-radius: 4px;
@@ -87,4 +95,42 @@
 .product-page-color-title {
     color: #EEE;
     margin: 10px 0;
+}
+
+
+.product-page-back-parent{
+    padding: 8px 0 ;
+    display: flex;
+    margin-top: 18px;
+}
+
+.product-page-back{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.product-page-back>a{
+    text-decoration: none;
+    background-color: #393E46;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.product-page-back>a>span{
+    color: #EEE;
+    cursor: pointer;
+    
+}
+
+.product-page-bradcrump{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+
+.product-page-bradcrump>span{
+    color: #AAA;
+
 }

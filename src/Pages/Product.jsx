@@ -1,5 +1,7 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
+import { ArrowBackIosRounded } from "@mui/icons-material";
+
 import "../Styles/product.css";
 import MainContext from "./../Contexts/MainContext";
 import Separator from "./../Utils/Separator";
@@ -18,10 +20,22 @@ const Product = () => {
 
   return (
     <>
-    <div className="product-page-back-parent">
-      
-    </div>
-      <div className="cart">
+      <div className="product-page-back-parent">
+        <div className="col-6">
+          <div className="product-page-bradcrump">
+            <span>جزئیات محصولات / دیجیتال / {findProduct.productName} </span>
+          </div>
+        </div>
+        <div className="col-6 product-page-back">
+          <Link to="/">
+            <span>
+              بازگشت به صفحه اصلی
+              <ArrowBackIosRounded fontSize="medium" />
+            </span>
+          </Link>
+        </div>
+      </div>
+      <div className="product">
         {findProduct && (
           <div className="product-content">
             <div className="row">
