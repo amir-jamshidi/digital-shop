@@ -5,6 +5,7 @@ import { ArrowBackIosRounded, ReplyAll } from "@mui/icons-material";
 import "../Styles/product.css";
 import MainContext from "./../Contexts/MainContext";
 import Separator from "./../Utils/Separator";
+import Rating from "../Utils/Rating/Rating"; 
 
 const Product = () => {
   const { recentProducts } = useContext(MainContext);
@@ -196,6 +197,7 @@ const Product = () => {
                               <span className="product-page-comment-name">
                                 علی محمدی :
                               </span>
+                              <Rating rateValue={3} isEdit={false}/>
                             </div>
                           </div>
                           <div className="col-10">
@@ -246,6 +248,7 @@ const Product = () => {
                               <span className="product-page-comment-name">
                                 علی محمدی :
                               </span>
+                              <Rating rateValue={3} isEdit={false}/>
                             </div>
                           </div>
                           <div className="col-10">

@@ -1,3 +1,7 @@
 .radio-rating {
     display: none;
 }
+
+.rating-parent{
+    display: flex;
+}
