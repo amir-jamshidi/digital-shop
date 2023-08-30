@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
-import { ArrowBackIosRounded } from "@mui/icons-material";
+import { ArrowBackIosRounded, ReplyAll } from "@mui/icons-material";
 
 import "../Styles/product.css";
 import MainContext from "./../Contexts/MainContext";
@@ -105,7 +105,9 @@ const Product = () => {
               <hr className="col-12" />
               <div className="col-12">
                 <div className="col-12 product-page-info-parent">
-                  <h4 className="product-page-property-title">مشخصات محصول : </h4>
+                  <h4 className="product-page-property-title">
+                    مشخصات محصول :{" "}
+                  </h4>
                   <ul className="product-page-property">
                     <li className="product-page-property-item">
                       <span className="col-4">امکانات ظاهری</span>
@@ -157,6 +159,116 @@ const Product = () => {
                       <span className="col-8">
                         پردازنده‌ی هشت هسته‌ای Zen ۲
                       </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <hr />
+              <div className="col-12">
+                <div className="col-12 product-page-info-parent">
+                  <h4 className="product-page-property-title">
+                    نظر خریداران :
+                  </h4>
+
+                  <ul className="product-page-comments-list">
+                    <li className="product-page-comments-parent">
+                      <div className="product-page-commnet-content">
+                        <div className="product-page-comment-badge-parent">
+                          <div className="col-6 d-flex align-items-center justify-content-end">
+                            <span className="product-page-comment-time">
+                              در تاریخ : 20 شهریور 1402 در ساعت : 18:20
+                            </span>
+                          </div>
+                          <div className="col-6 d-flex align-content-center justify-content-start">
+                            <span className="product-page-comment-badge">
+                              خریدار محصول
+                            </span>
+                          </div>
+                        </div>
+                        <div className="product-page-comment-body">
+                          <div className="col-1">
+                            <div className="product-page-img-parent">
+                              <img
+                                src="/assets/ps5.jpg"
+                                className="product-page-comments-img"
+                                alt=""
+                              />
+                              <span className="product-page-comment-name">
+                                علی محمدی :
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-10">
+                            <div className="product-page-comment-title-parent">
+                              <span>
+                                سلام من از این محصول استفاده کردم و واقعا خوب
+                                بود . مرسی از دیجیتال استور برای پشتیبانی و
+                                حدمات خوبی که داره در مورد گارانتی هم باید بگم
+                                که کارت گارانتی 24 ماهه داخل خود بسته بود و
+                                دقیقا تا دو سال بعد گارانتیش اعتبار داشت . واقعا
+                                مرسی از مجموعه
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-1">
+                            <div className="product-page-comment-replay-parent">
+                              <span className="product-page-comment-replay">
+                                پاسخ <ReplyAll />
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li className="product-page-comments-parent">
+                      <div className="product-page-commnet-content">
+                        <div className="product-page-comment-badge-parent">
+                          <div className="col-6 d-flex align-items-center justify-content-end">
+                            <span className="product-page-comment-time">
+                              در تاریخ : 20 شهریور 1402 در ساعت : 18:20
+                            </span>
+                          </div>
+                          <div className="col-6 d-flex align-content-center justify-content-start">
+                            <span className="product-page-comment-badge">
+                              خریدار محصول
+                            </span>
+                          </div>
+                        </div>
+                        <div className="product-page-comment-body">
+                          <div className="col-1">
+                            <div className="product-page-img-parent">
+                              <img
+                                src="/assets/ps5.jpg"
+                                className="product-page-comments-img"
+                                alt=""
+                              />
+                              <span className="product-page-comment-name">
+                                علی محمدی :
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-10">
+                            <div className="product-page-comment-title-parent">
+                              <span>
+                                سلام من از این محصول استفاده کردم و واقعا خوب
+                                بود . مرسی از دیجیتال استور برای پشتیبانی و
+                                حدمات خوبی که داره در مورد گارانتی هم باید بگم
+                                که کارت گارانتی 24 ماهه داخل خود بسته بود و
+                                دقیقا تا دو سال بعد گارانتیش اعتبار داشت . واقعا
+                                مرسی از مجموعه
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-1">
+                            <div className="product-page-comment-replay-parent">
+                              <span className="product-page-comment-replay">
+                                پاسخ <ReplyAll />
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
