@@ -1,7 +1,7 @@
 import { StarRounded } from "@mui/icons-material";
 import { useState } from "react";
 import "./rating.css";
-const Rating = ({ rateValue, isEdit = true }) => {
+const Rating = ({ rateValue, isEdit = true , size = 'small' }) => {
   
   const [rate, setRate] = useState(rateValue);
   const [hover, setHover] = useState(null);
@@ -32,7 +32,7 @@ const Rating = ({ rateValue, isEdit = true }) => {
               onMouseLeave={() => setHover(null)}
             >
               <StarRounded
-                fontSize="small"
+                fontSize={size}
                 style={{
                   color: currentStar <= (hover || rate) ? "gold" : "#eee",
                 }}

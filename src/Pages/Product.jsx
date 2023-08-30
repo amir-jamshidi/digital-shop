@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ArrowBackIosRounded, ReplyAll } from "@mui/icons-material";
 
 import "../Styles/product.css";
@@ -17,6 +17,12 @@ const Product = () => {
     );
   };
 
+
+  useEffect(()=>{
+    //window.scrollTo(0 , 0);
+  },[])
+
+  
   findProductInfo();
 
   return (
@@ -24,14 +30,15 @@ const Product = () => {
       {findProduct && (
         <>
           <div className="product-page-back-parent">
-            <div className="col-6">
+       
+            <div className="col-7 col-lg-6">
               <div className="product-page-bradcrump">
                 <span>
-                  جزئیات محصولات / دیجیتال / {findProduct.productName}{" "}
+                   محصولات  / {findProduct.productName}{" "}
                 </span>
               </div>
             </div>
-            <div className="col-6 product-page-back">
+            <div className="col-5 col-lg-6 product-page-back">
               <Link to="/">
                 <span>
                   بازگشت به صفحه اصلی
@@ -39,18 +46,19 @@ const Product = () => {
                 </span>
               </Link>
             </div>
+            
           </div>
           <div className="product">
             <div className="product-content">
               <div className="row">
-                <div className="col-3">
+                <div className="col-12 mb-3 col-lg-3 mb-lg-0">
                   <img
                     src={findProduct.productImg[0]}
                     className="product-page-img"
                     alt=""
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-12 mb-3 col-lg-6 mb-lg-0">
                   <div className="product-page-parent">
                     <ul className="product-page-list">
                       <li>نام محصول : {findProduct.productName}</li>
@@ -73,7 +81,7 @@ const Product = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="col-3">
+                <div className="col-12 mb-3 col-lg-3 mb-lg-0">
                   <div className="product-page-price-parent">
                     <h3 className="product-page-price-title">باکس خرید</h3>
                     <p className="product-page-color-title">
@@ -175,19 +183,36 @@ const Product = () => {
                     <li className="product-page-comments-parent">
                       <div className="product-page-commnet-content">
                         <div className="product-page-comment-badge-parent">
-                          <div className="col-6 d-flex align-items-center justify-content-end">
+                          
+                          <div className="row w-100">
+
+                       
+                          
+                          <div className="col-12 col-lg-6 justify-content-lg-end d-flex align-items-center justify-content-center">
                             <span className="product-page-comment-time">
-                              در تاریخ : 20 شهریور 1402 در ساعت : 18:20
+                            20 شهریور 1402 ساعت 18:20
                             </span>
                           </div>
-                          <div className="col-6 d-flex align-content-center justify-content-start">
+                          <div className="col-12 col-lg-6 justify-content-lg-start d-flex align-content-center justify-content-center my-2 my-lg-0">
                             <span className="product-page-comment-badge">
                               خریدار محصول
                             </span>
                           </div>
+
+                          </div>
                         </div>
+
+
+
                         <div className="product-page-comment-body">
-                          <div className="col-1">
+
+
+                        <div className="row">
+                          
+                          
+                        
+                          
+                          <div className="col-4 col-lg-2">
                             <div className="product-page-img-parent">
                               <img
                                 src="/assets/ps5.jpg"
@@ -199,8 +224,10 @@ const Product = () => {
                               </span>
                               <Rating rateValue={3} isEdit={false}/>
                             </div>
+
+                            
                           </div>
-                          <div className="col-10">
+                          <div className="col-8 col-lg-8">
                             <div className="product-page-comment-title-parent">
                               <span>
                                 سلام من از این محصول استفاده کردم و واقعا خوب
@@ -212,67 +239,20 @@ const Product = () => {
                               </span>
                             </div>
                           </div>
-                          <div className="col-1">
+                          <div className="col-12 col-lg-2 mt-3 mt-lg-0">
                             <div className="product-page-comment-replay-parent">
                               <span className="product-page-comment-replay">
                                 پاسخ <ReplyAll />
                               </span>
                             </div>
                           </div>
+
+                          </div>  
                         </div>
                       </div>
                     </li>
 
-                    <li className="product-page-comments-parent">
-                      <div className="product-page-commnet-content">
-                        <div className="product-page-comment-badge-parent">
-                          <div className="col-6 d-flex align-items-center justify-content-end">
-                            <span className="product-page-comment-time">
-                              در تاریخ : 20 شهریور 1402 در ساعت : 18:20
-                            </span>
-                          </div>
-                          <div className="col-6 d-flex align-content-center justify-content-start">
-                            <span className="product-page-comment-badge">
-                              خریدار محصول
-                            </span>
-                          </div>
-                        </div>
-                        <div className="product-page-comment-body">
-                          <div className="col-1">
-                            <div className="product-page-img-parent">
-                              <img
-                                src="/assets/ps5.jpg"
-                                className="product-page-comments-img"
-                                alt=""
-                              />
-                              <span className="product-page-comment-name">
-                                علی محمدی :
-                              </span>
-                              <Rating rateValue={3} isEdit={false}/>
-                            </div>
-                          </div>
-                          <div className="col-10">
-                            <div className="product-page-comment-title-parent">
-                              <span>
-                                سلام من از این محصول استفاده کردم و واقعا خوب
-                                بود . مرسی از دیجیتال استور برای پشتیبانی و
-                                حدمات خوبی که داره در مورد گارانتی هم باید بگم
-                                که کارت گارانتی 24 ماهه داخل خود بسته بود و
-                                دقیقا تا دو سال بعد گارانتیش اعتبار داشت . واقعا
-                                مرسی از مجموعه
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-1">
-                            <div className="product-page-comment-replay-parent">
-                              <span className="product-page-comment-replay">
-                                پاسخ <ReplyAll />
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                   
                   </ul>
                 </div>
               </div>
