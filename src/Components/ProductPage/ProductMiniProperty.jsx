@@ -1,6 +1,6 @@
 const ProductMiniProperty = ({findProduct})=>{
     return(
-        <div>
+         
              <div className="col-12 mb-3 col-lg-6 mb-lg-0">
           <div className="product-page-parent">
             <ul className="product-page-list">
@@ -18,7 +18,6 @@ const ProductMiniProperty = ({findProduct})=>{
               <li>تعداد موجودی در انبار : {findProduct.productInventory} </li>
             </ul>
           </div>
-        </div>
         </div>
     )
 }

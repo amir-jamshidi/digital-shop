@@ -5,7 +5,7 @@ const ProductImg = ({findProduct}) => {
         src={findProduct.productImg[0]}
         className="product-page-img"
         alt=""
-      />
+      /> 
     </div>
   );
 };

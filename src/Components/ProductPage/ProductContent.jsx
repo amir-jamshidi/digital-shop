@@ -28,6 +28,7 @@ const ProductContent = ({ findProduct }) => {
       <ProductProperty findProduct={findProduct}/>
       <hr />
       <ProductComments/>
+      pagination
     </div>
   );
 };

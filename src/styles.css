@@ -121,6 +121,33 @@ svg {
     padding: 8px;
 }
 
+.search-input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: #EEE;
+    padding: 16px 48px !important;
+    font-size:18px;
+}
+
+.search-content{
+    position: relative;
+    border-radius: 16px;
+    background-color: #393E46;
+    margin-bottom: 36px;
+}
+
+.search-icon-parent{
+    left: 18px;
+    width: 36px !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
 .sidebar {
     border-radius: 4px;
     box-shadow: 0 0 2px #EEEEEE;
@@ -160,15 +187,15 @@ svg {
     padding: 8px;
     transition: 0.3s;
     border-radius: 4px;
-    
+
 }
 
-.hr-line-sidebar{
-   margin: 0 4px;
-   padding: 0;
+.hr-line-sidebar {
+    margin: 0 4px;
+    padding: 0;
 }
 
-.hr-line-sidebar:first-child{
+.hr-line-sidebar:first-child {
     margin-top: 6px;
 }
 
@@ -191,8 +218,8 @@ svg {
 }
 
 .item-title>a {
-  text-decoration: none;
-  color: #EEE;
+    text-decoration: none;
+    color: #EEE;
 }
 
 .item-price {
@@ -342,16 +369,16 @@ svg {
     padding: 8px;
 }
 
-.cart-item:hover{
+.cart-item:hover {
     transition: 0.3s;
     background-color: #393E46;
 }
 
-.cart-item:hover{
+.cart-item:hover {
     background-color: #222831;
 }
 
-.cart-item-title-link{
+.cart-item-title-link {
     text-decoration: none;
     color: #EEE;
 }
@@ -381,12 +408,12 @@ svg {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
 
 }
 
-.hr-line{
-    margin:  0 4px;
+.hr-line {
+    margin: 0 4px;
     padding: 0;
     align-self: center;
 }
