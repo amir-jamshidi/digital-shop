@@ -156,12 +156,20 @@ svg {
 
 .sidebar-item {
     display: flex;
-    margin-top: 6px;
     align-items: center;
     padding: 8px;
     transition: 0.3s;
     border-radius: 4px;
-    border-top: 1px solid #222831;
+    
+}
+
+.hr-line-sidebar{
+   margin: 0 4px;
+   padding: 0;
+}
+
+.hr-line-sidebar:first-child{
+    margin-top: 6px;
 }
 
 .sidebar-item:hover {
@@ -334,6 +342,20 @@ svg {
     padding: 8px;
 }
 
+.cart-item:hover{
+    transition: 0.3s;
+    background-color: #393E46;
+}
+
+.cart-item:hover{
+    background-color: #222831;
+}
+
+.cart-item-title-link{
+    text-decoration: none;
+    color: #EEE;
+}
+
 .cart-page-title {
     margin: 8px 0 16px 0;
     color: #EEE;
@@ -353,14 +375,20 @@ svg {
 }
 
 .cart-list>li {
-    border-bottom: 1px solid #1C82AD;
+
     padding: 12px;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 8px;
+    
 
+}
+
+.hr-line{
+    margin:  0 4px;
+    padding: 0;
+    align-self: center;
 }
 
 .cart-list img {
