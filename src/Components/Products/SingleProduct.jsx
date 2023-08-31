@@ -29,7 +29,7 @@ const SingleProduct = ({
         <button onClick={() => addToCart(productId)} className="btn-buy">
           افزودن به سبد خرید
         </button>
-        <button className="btn-more"><Link to={`product/${productId}`}>نمایش جزئیات بیشتر</Link></button>
+        <button className="btn-more"><Link to={`/product/${productId}`}>نمایش جزئیات بیشتر</Link></button>
       </div>
     </div>
   );
