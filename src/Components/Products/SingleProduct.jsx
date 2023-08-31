@@ -15,7 +15,7 @@ const SingleProduct = ({
   const { addToCart } = useContext(MainContext);
 
   return (
-    <div className="col-12 col-md-6 col-lg-4 col-item-parent">
+    <div className="col-12 col-md-6 col-lg-4 col-item-parent py-2">
       <div className="main-item">
         <div className="item-colors-parent">
           {productColors.map((color, index) => (
