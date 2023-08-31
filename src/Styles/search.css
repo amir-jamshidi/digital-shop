@@ -10,3 +10,10 @@
     background-color: #393E46;
     padding: 8px;
 }
+
+.search-content {
+    position: relative;
+    border-radius: 16px;
+    background-color: #393E46;
+    margin-bottom: 18px;
+}

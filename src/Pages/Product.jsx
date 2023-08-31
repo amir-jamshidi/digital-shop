@@ -18,13 +18,11 @@ const Product = () => {
       (product) => product.productId == productID
     );
   };
-
   useEffect(() => {
     window.scrollTo(0 , 0);
   }, []);
 
   findProductInfo();
-
   return (
     <>
       {findProduct && (

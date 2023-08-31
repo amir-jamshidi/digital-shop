@@ -111,7 +111,7 @@ svg {
 }
 
 .home {
-    margin-top: 32px !important;
+    margin-top: 18px !important;
 }
 
 .main {
@@ -131,12 +131,7 @@ svg {
     font-size: 18px;
 }
 
-.search-content {
-    position: relative;
-    border-radius: 16px;
-    background-color: #393E46;
-    margin-bottom: 36px;
-}
+
 
 .search-icon-parent {
     left: 18px;

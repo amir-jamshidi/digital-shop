@@ -1,11 +1,15 @@
-const ProductImg = ({findProduct}) => {
+import Slider from "./../Swiper/Slider";
+import { SwiperSlide } from "swiper/react";
+const ProductImg = ({ findProduct }) => {
   return (
     <div className="col-12 mb-3 col-lg-3 mb-lg-0">
-      <img
-        src={findProduct.productImg[0]}
-        className="product-page-img"
-        alt=""
-      /> 
+      <Slider isProduct={true}>
+        {findProduct.productImg.map((img , index) => (
+          <SwiperSlide key={index}>
+            <img src={img} alt="" />
+          </SwiperSlide>
+        ))}
+      </Slider>
     </div>
   );
 };

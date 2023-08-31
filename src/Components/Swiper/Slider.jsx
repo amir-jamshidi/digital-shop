@@ -1,26 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-const Slider = () => {
+import "swiper/css/autoplay";
+
+const Slider = ({ isProduct = false, children }) => {
+  
   return (
-    <div className="home-slider">
+    <div className={isProduct ? "home-slider mb-0" : "home-slider"}>
       <Swiper
-      spaceBetween={25}
+        spaceBetween={25}
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={isProduct ? [Pagination] : [Pagination, Autoplay]}
       >
-        <SwiperSlide>
-          <img src="/assets/slider1.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/slider2.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/slider3.jpg" alt="" />
-        </SwiperSlide>
+      
+        {children}
       </Swiper>
     </div>
   );
