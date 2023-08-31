@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 //--
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useNavigate } from "react-router-dom";
 //--
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 //--
 import MainContext from "./Contexts/MainContext";
 import Toast from "./Utils/Toast";
-import { Home, About, Contact, Cart } from "./Pages";
-
+//--
 import getRoutes from "./routes";
 import DrawerRight from "./Components/Drawer/DrawerRight";
 
@@ -19,6 +18,8 @@ const App = () => {
   const [fiveBestSeller, setFiveBestSeller] = useState([]);
   const [cart, setCart] = useState([]);
   const [drawer, setDrawer] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getAllApi();
@@ -89,8 +90,13 @@ const App = () => {
     }
   };
 
+  //Manage Drawer
   const manageDrawer = (state) => {
     setDrawer(state);
+  };
+
+  const searchProduct = (productName) => {
+    navigate(`/search/${productName}`);
   };
 
   return (
@@ -103,7 +109,8 @@ const App = () => {
           removeItemCart,
           fiveBestSeller,
           drawer,
-          manageDrawer
+          manageDrawer,
+          searchProduct,
         }}
       >
         <DrawerRight />

@@ -121,24 +121,24 @@ svg {
     padding: 8px;
 }
 
-.search-input{
+.search-input {
     background-color: transparent;
     border: none;
     outline: none;
     text-align: center;
     color: #EEE;
     padding: 16px 48px !important;
-    font-size:18px;
+    font-size: 18px;
 }
 
-.search-content{
+.search-content {
     position: relative;
     border-radius: 16px;
     background-color: #393E46;
     margin-bottom: 36px;
 }
 
-.search-icon-parent{
+.search-icon-parent {
     left: 18px;
     width: 36px !important;
     height: 100%;
@@ -245,12 +245,20 @@ svg {
 }
 
 .main-item {
-    padding: 8px;
     border-radius: 4px;
     background-color: #393E46;
     margin: 8px 0;
     transition: 0.3s;
     position: relative;
+}
+
+.col-item-parent:hover {
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.col-item-parent:hover {
+    background-color: #222831;
 }
 
 .main-item:hover {
