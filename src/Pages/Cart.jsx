@@ -3,11 +3,13 @@ import MainContext from "./../Contexts/MainContext";
 import { RemoveCircleRounded } from "@mui/icons-material";
 import Separator from "./../Utils/Separator";
 import { Link } from "react-router-dom";
+import ProductBradCrump from "./../Components/ProductPage/ProductBradCrump";
 const Cart = () => {
   const { cart, removeItemCart } = useContext(MainContext);
   let totalPrice = 0;
   return (
     <div>
+      <ProductBradCrump findProduct={""} />
       <div className="cart">
         <div className="row">
           <div className="cart-page-parent col-12">
@@ -63,11 +65,10 @@ const Cart = () => {
                               {Separator(c.productPrice * c.productCount)}
                             </span>
 
-                            <div
-                              onClick={() => removeItemCart(c.id)}
-                              className="col-12 mt-3 col-lg-1 mt-lg-0 cart-item-icon-parent"
-                            >
-                              <RemoveCircleRounded className="remove-icon" />
+                            <div className="col-12 mt-3 col-lg-1 mt-lg-0 cart-item-icon-parent">
+                              <span onClick={() => removeItemCart(c.id)}>
+                                <RemoveCircleRounded className="remove-icon" />
+                              </span>
                             </div>
                           </div>
                         </li>
