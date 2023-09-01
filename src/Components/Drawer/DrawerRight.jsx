@@ -1,5 +1,5 @@
 import "./drawer.css";
-import { useContext , useState} from "react";
+import { useContext, useState } from "react";
 import MainContext from "../../Contexts/MainContext";
 import { CloseTwoTone } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,9 +12,12 @@ const DrawerRight = () => {
   const { drawer, manageDrawer } = useContext(MainContext);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+
   const searchSubmit = (e) => {
     e.preventDefault();
     navigate(`/search/${search}`);
+    setSearch('');
+    manageDrawer(false);
   };
 
   return (
@@ -25,8 +28,9 @@ const DrawerRight = () => {
             <CloseTwoTone fontSize="large" />
           </span>
         </div>
-        <form onSubmit={searchSubmit}>
+        <form className="form-search" onSubmit={searchSubmit}>
           <input
+            placeholder="دنبال چیزی میگردی ؟"
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}

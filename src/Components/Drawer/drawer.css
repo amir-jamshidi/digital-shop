@@ -35,7 +35,7 @@
     border-radius: 4px;
     transition: 0.3s;
     cursor: pointer;
- 
+
 }
 
 .drawer-list>li:hover {
@@ -48,4 +48,19 @@
     text-decoration: none;
     width: 100%;
     display: inline-block;
+}
+
+.form-search {
+    padding: 0 8px;
+}
+
+.form-search>input {
+    width: 100%;
+    background-color: #222831;
+    border: 1px solid #222831;
+    padding: 12px 8px;
+    border-radius: 4px;
+    color: #EEE;
+    outline: none;
+    text-align: center;
 }
