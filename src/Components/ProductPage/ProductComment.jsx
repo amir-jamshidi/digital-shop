@@ -1,7 +1,6 @@
 import { ReplyAll } from "@mui/icons-material";
 import Rating from "./../../Utils/Rating/Rating";
 const ProductComment = ({ msg }) => {
-    console.log(msg);
   return (
     <li className="product-page-comments-parent">
       <div className="product-page-commnet-content">
