@@ -18,7 +18,7 @@ const ProductComment = ({ msg }) => {
         </div>
 
         <div className="product-page-comment-body">
-          <div className="row">
+          <div className="row w-100">
             <div className="col-4 col-lg-2">
               <div className="product-page-img-parent">
                 <img
@@ -32,7 +32,7 @@ const ProductComment = ({ msg }) => {
             </div>
             <div className="col-8 col-lg-8">
               <div className="product-page-comment-title-parent">
-                <span className="px-1 px-lg-0">{msg}</span>
+                <span className="px-1 px-lg-0 w-100">{msg}</span>
               </div>
             </div>
             <div className="col-12 col-lg-2 mt-3 mt-lg-0">

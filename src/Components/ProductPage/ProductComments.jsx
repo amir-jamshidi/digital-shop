@@ -29,8 +29,8 @@ const ProductComments = ({ findProduct }) => {
         <h4 className="product-page-property-title">نظر خریداران :</h4>
 
         <ul className="product-page-comments-list">
-          {filterComment.map((comment) => (
-            <ProductComment key={comment.id} {...comment} />
+          {filterComment.map((comment , i) => (
+            <ProductComment key={i} {...comment} />
           ))}
         </ul>
 
@@ -38,6 +38,7 @@ const ProductComments = ({ findProduct }) => {
           {[...Array.from({ length: paginationCount })].map((i, index) => {
             return (
               <li
+                key={index+1}
                 onClick={() => changePage(index + 1)}
                 className={
                   currentPage === index + 1
