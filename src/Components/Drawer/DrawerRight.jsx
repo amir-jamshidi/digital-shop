@@ -1,8 +1,8 @@
 import "./drawer.css";
-import { useContext } from "react";
+import { useContext , useState} from "react";
 import MainContext from "../../Contexts/MainContext";
 import { CloseTwoTone } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   HomeRounded,
   InfoRounded,
@@ -10,6 +10,12 @@ import {
 } from "@mui/icons-material";
 const DrawerRight = () => {
   const { drawer, manageDrawer } = useContext(MainContext);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+  const searchSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search/${search}`);
+  };
 
   return (
     <div className={drawer ? "drawer show d-lg-none" : "drawer d-lg-none"}>
@@ -19,6 +25,13 @@ const DrawerRight = () => {
             <CloseTwoTone fontSize="large" />
           </span>
         </div>
+        <form onSubmit={searchSubmit}>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </form>
 
         <div className="drawer-nav">
           <ul className="drawer-list">
