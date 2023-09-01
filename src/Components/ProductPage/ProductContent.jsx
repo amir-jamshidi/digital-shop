@@ -11,24 +11,18 @@ import ProductProperty from "./ProductProperty";
 const ProductContent = ({ findProduct }) => {
   return (
     <div className="product-content">
-
       <div className="row">
         <ProductImg findProduct={findProduct} />
         <ProductMiniProperty findProduct={findProduct} />
         <ProductBuyBox findProduct={findProduct} />
       </div>
-
-
       <hr className="col-12" />
-     
-      <ProductInfo findProduct={findProduct}/>
-
+      <ProductInfo findProduct={findProduct} />
       <hr className="col-12" />
-     
-      <ProductProperty findProduct={findProduct}/>
+      <ProductProperty findProduct={findProduct} />
       <hr />
-      <ProductComments/>
-      pagination
+      <ProductComments findProduct={findProduct} />
+      
     </div>
   );
 };

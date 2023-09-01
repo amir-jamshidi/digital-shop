@@ -16,7 +16,7 @@ const DrawerRight = () => {
   const searchSubmit = (e) => {
     e.preventDefault();
     navigate(`/search/${search}`);
-    setSearch('');
+    setSearch("");
     manageDrawer(false);
   };
 
