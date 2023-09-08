@@ -1,4 +1,4 @@
-import { Home, About, Contact, Cart, Product, SearchProduct } from "./Pages";
+import { Home, About, Contact, Cart, Product, SearchProduct , AllProducts } from "./Pages";
 
 const getRoutes = () => {
   const routes = [
@@ -6,6 +6,7 @@ const getRoutes = () => {
     { path: "/cart", element: <Cart /> },
     { path: "/about", element: <About /> },
     { path: "/contact", element: <Contact /> },
+    { path: "/all-products", element: <AllProducts /> },
     { path: "/product/:productID", element: <Product /> },
     { path: "/search/:productName", element: <SearchProduct /> },
   ];
