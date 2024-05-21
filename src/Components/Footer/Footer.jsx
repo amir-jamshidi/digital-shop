@@ -1,6 +1,7 @@
 import { Copyright } from "@mui/icons-material";
 
 const Footer = () => {
+ 
   return (
     <div className="footer">
       <div className="container">
